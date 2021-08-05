@@ -60,6 +60,14 @@
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true
+            },
+            "devprod": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.devprod.ts"
+                }
+              ]
             }
           },
           "defaultConfiguration": "production"
@@ -72,6 +80,9 @@
             },
             "development": {
               "browserTarget": "local-dev-demo:build:development"
+            },
+            "devprod": {
+              "browserTarget": "local-dev-demo:build:devprod"
             }
           },
           "defaultConfiguration": "development"

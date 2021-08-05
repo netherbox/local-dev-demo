@@ -6,7 +6,11 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "start:devprod": "npm run start:devprod:browser && npm run start:devprod:ng",
+    "---": "---",
+    "start:devprod:browser": "start chrome --ignore-certificate-errors --host-resolver-rules=\"MAP local-dev-demo-e0d64.web.app:443 localhost:4200\" --user-data-dir=\"c:/temp/chrome-local-dev-demo-e0d64.web.app-dev/\" --incognito https://local-dev-demo-e0d64.web.app/",
+    "start:devprod:ng": "ng serve --ssl --disableHostCheck=true --configuration=devprod"
   },
   "private": true,
   "dependencies": {
